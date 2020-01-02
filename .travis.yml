@@ -10,10 +10,10 @@ script:
 
 after_success:
     # Builds Docker Images
-    - docker build -t eadsgraphic/multi-client ./client .
-    - docker build -t eadsgraphic/multi-nginx ./nginx .
-    - docker build -t eadsgraphic/multi-server ./server .
-    - docker build -t eadsgraphic/multi-worker ./worker .
+    - docker build -t eadsgraphic/multi-client ./client
+    - docker build -t eadsgraphic/multi-nginx ./nginx
+    - docker build -t eadsgraphic/multi-server ./server
+    - docker build -t eadsgraphic/multi-worker ./worker
 
     # Login to Docker HUB CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
