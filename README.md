@@ -1,8 +1,6 @@
-## AWS Configuration Cheat Sheet
+# AWS Scalable Docker Setup
 
-This lecture note is not intended to be a replacement for the videos, but only to serve as a cheat sheet for students who want to quickly run thru the AWS configuration steps or easily see if they missed a step. Steps listed are accurate as of 7-11-2019, keep in mind that AWS makes frequent small changes to their UI.
-
-# RDS Database Creation
+### RDS Database Creation
 
 Go to AWS Management Console and use Find Services to search for RDS
 
@@ -30,7 +28,7 @@ Set Database Name to fibvalues
 
 Scroll down and click Create Database button
 
-# ElastiCache Redis Creation
+### ElastiCache Redis Creation
 
 Go to AWS Management Console and use Find Services to search for ElastiCache
 
@@ -58,7 +56,7 @@ Tick all subnet’s boxes
 
 Scroll down and click Create button
 
-# Creating a Custom Security Group
+### Creating a Custom Security Group
 
 Go to AWS Management Console and use Find Services to search for VPC
 
@@ -92,7 +90,7 @@ Click Save Rules button
 
 Click Close
 
-# Applying Security Groups to ElastiCache
+### Applying Security Groups to ElastiCache
 
 Go to AWS Management Console and use Find Services to search for ElastiCache
 
@@ -104,7 +102,7 @@ Change VPC Security group to the multi-docker group and click Save
 
 Click Modify
 
-# Applying Security Groups to RDS
+### Applying Security Groups to RDS
 
 Go to AWS Management Console and use Find Services to search for RDS
 
@@ -118,7 +116,7 @@ Scroll down and click Continue button
 
 Click Modify DB instance button
 
-# Applying Security Groups to Elastic Beanstalk
+### Applying Security Groups to Elastic Beanstalk
 
 Go to AWS Management Console and use Find Services to search for Elastic Beanstalk
 
@@ -132,7 +130,7 @@ Scroll down to EC2 Security Groups and tick box next to multi-docker
 
 Click Apply and Click Confirm
 
-# Setting Environment Variables
+### Setting Environment Variables
 
 Go to AWS Management Console and use Find Services to search for Elastic Beanstalk
 
@@ -164,7 +162,7 @@ Set PGPORT to 5432
 
 Click Apply button
 
-# IAM Keys for Deployment
+### IAM Keys for Deployment
 
 Go to AWS Management Console and use Find Services to search for IAM
 
@@ -190,7 +188,7 @@ Click Create User
 
 Copy Access key ID and secret access key for use later
 
-# AWS Keys in Travis
+### AWS Keys in Travis
 
 Open up Travis dashboard and find your multi-docker app
 
